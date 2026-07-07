@@ -28,16 +28,17 @@ public class Room implements Inspectable {
         this.dark = false;
     }
 
-
     public String getName() {
         return name;
     }
 
+    public String getDescription() {
+        return description;
+    }
 
     public void addItem(Item item) {
         items.add(item);
     }
-
 
     public Item removeItem(String itemName) {
         for (Item item : items) {
@@ -50,7 +51,6 @@ public class Room implements Inspectable {
         return null;
     }
 
-
     public boolean hasItem(String itemName) {
         for (Item item : items) {
             if (item.getName().equalsIgnoreCase(itemName)) {
@@ -61,46 +61,37 @@ public class Room implements Inspectable {
         return false;
     }
 
-
     public void addPuzzle(Puzzle puzzle) {
         puzzles.add(puzzle);
     }
-
 
     public void setMachine(Machine machine) {
         this.machine = machine;
     }
 
-
     public void setDoor(Door door) {
         this.door = door;
     }
-
 
     public Machine getMachine() {
         return machine;
     }
 
-
     public Door getDoor() {
         return door;
     }
-
 
     public List<Item> getItems() {
         return items;
     }
 
-
     public boolean isDark() {
         return dark;
     }
 
-
     public void setDark(boolean dark) {
         this.dark = dark;
     }
-
 
     @Override
     public String inspect() {
@@ -111,7 +102,6 @@ public class Room implements Inspectable {
 
         return description;
     }
-
 
     public void displayItems() {
 

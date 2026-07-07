@@ -7,9 +7,9 @@ public class Puzzle implements Interactable, Inspectable {
 
     private String name;
     private String description;
+
     private String solution;
     private boolean solved;
-
 
     public Puzzle(String name, String description, String solution) {
         this.name = name;
@@ -18,16 +18,13 @@ public class Puzzle implements Interactable, Inspectable {
         this.solved = false;
     }
 
-
     public String getName() {
         return name;
     }
 
-
     public boolean isSolved() {
         return solved;
     }
-
 
     @Override
     public String inspect() {
@@ -38,7 +35,6 @@ public class Puzzle implements Interactable, Inspectable {
 
         return description;
     }
-
 
     @Override
     public void interact(Player player) {
@@ -51,7 +47,6 @@ public class Puzzle implements Interactable, Inspectable {
         System.out.println("Enter the puzzle solution:");
 
     }
-
 
     public boolean solve(String answer) {
 
@@ -67,5 +62,4 @@ public class Puzzle implements Interactable, Inspectable {
 
         return false;
     }
-
 }
