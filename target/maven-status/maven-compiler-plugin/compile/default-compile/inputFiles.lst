@@ -1,6 +1,13 @@
+C:\Users\cfarz\escape-room\src\main\java\com\cfarz\escaperoom\controller\GameControl.java
+C:\Users\cfarz\escape-room\src\main\java\com\cfarz\escaperoom\interfaces\Inspectable.java
+C:\Users\cfarz\escape-room\src\main\java\com\cfarz\escaperoom\interfaces\Interactable.java
 C:\Users\cfarz\escape-room\src\main\java\com\cfarz\escaperoom\Main.java
 C:\Users\cfarz\escape-room\src\main\java\com\cfarz\escaperoom\model\Door.java
+C:\Users\cfarz\escape-room\src\main\java\com\cfarz\escaperoom\model\Inventory.java
+C:\Users\cfarz\escape-room\src\main\java\com\cfarz\escaperoom\model\Item.java
+C:\Users\cfarz\escape-room\src\main\java\com\cfarz\escaperoom\model\Machine.java
 C:\Users\cfarz\escape-room\src\main\java\com\cfarz\escaperoom\model\Player.java
-C:\Users\cfarz\escape-room\src\main\java\com\cfarz\escaperoom\model\Rooms.java
+C:\Users\cfarz\escape-room\src\main\java\com\cfarz\escaperoom\model\Puzzle.java
+C:\Users\cfarz\escape-room\src\main\java\com\cfarz\escaperoom\model\Room.java
 C:\Users\cfarz\escape-room\src\main\java\com\cfarz\escaperoom\util\Timer.java
 C:\Users\cfarz\escape-room\src\main\java\com\cfarz\escaperoom\view\OutputConsole.java
