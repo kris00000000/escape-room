@@ -1,9 +1,19 @@
 package com.cfarz.escaperoom;
 
+import com.cfarz.escaperoom.controller.Game;
+import com.cfarz.escaperoom.controller.GameControl;
+
 public class Main {
+    /**
+     * In this class we start by initiating the entire game.
+     *
+     * @param args command-line arguments passed by launching the application.
+     */
     public static void main(String[] args) {
-        System.out.println("Welcome to Escape Room!");
-        System.out.println("Will you be able to get out...?");
-        System.out.println("You have a total of 2h to escape");
+
+        Game game = new Game();
+        GameControl controller = new GameControl(game);
+        controller.startGame();
+
     }
 }
