@@ -30,7 +30,7 @@ public class Lantern extends Item {
         if (!lit) {
             lit = true;
             room.setDark(false);
-            System.out.println("The lantern lights up. You can now see the room.");
+            System.out.println("The lantern made everything visible! You can now see what's in the room.");
         } else {
             System.out.println("The lantern is already lit.");
         }

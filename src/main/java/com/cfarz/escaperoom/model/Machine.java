@@ -83,7 +83,7 @@ public class Machine implements Interactable, Inspectable {
     @Override
     public String inspect() {
         if (repaired) {
-            return name + " has been repaired and is working again.";
+            return name + " has been repaired and works again.";
         }
         return description;
     }
@@ -118,14 +118,14 @@ public class Machine implements Interactable, Inspectable {
         }
 
         if (requiredPuzzle != null && !requiredPuzzle.isSolved()) {
-            System.out.println("The machine is locked. Solve the puzzle first.");
+            System.out.println("The machine is locked. Solve the puzzle and find the combination first.");
             return false;
         }
 
         if (enteredCode.equals(code)) {
             repaired = true;
 
-            System.out.println("The " + name + " starts working again!");
+            System.out.println("The " + name + " is finally working again!");
 
             if (rewardStone != null) {
                 player.getInventory().addItem(rewardStone);

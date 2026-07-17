@@ -61,7 +61,7 @@ public class Puzzle implements Interactable, Inspectable {
     public String inspect() {
 
         if (solved) {
-            return "The puzzle has already been solved.";
+            return "The puzzle has been solved.";
         }
         return description;
     }
@@ -91,7 +91,7 @@ public class Puzzle implements Interactable, Inspectable {
     public boolean solve(String answer) {
 
         if (solved) {
-            System.out.println("This puzzle is already solved.");
+            System.out.println("This puzzle is solved.");
             return false;
         }
 

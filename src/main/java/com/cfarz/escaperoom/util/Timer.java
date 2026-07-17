@@ -36,7 +36,7 @@ public class Timer {
 	 * 
 	 * Calculates the amount of time left before the timer ends.
 	 *
-	 * @return rTime left in seconds.
+	 * @return time left in seconds.
 	 */
 	public long getRemainingTime() {
 		long remaining = timeLimit - getElapsedTime();

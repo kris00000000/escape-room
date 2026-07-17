@@ -13,12 +13,12 @@ public class Game {
     private Room futureRoom;
     private Timer timer;
 
-    //Puzzles
+    // Games to find the combination.
     private Puzzle symbolPuzzle;
     private Puzzle wirePuzzle;
     private Puzzle laserPuzzle;
 
-    //Machines
+    // Machines
     private Machine pastMachine;
     private Machine presentMachine;
     private Machine futureMachine;
@@ -44,16 +44,17 @@ public class Game {
 
         pastRoom = new Room(
                 "Past",
-                "An ancient stone chamber.");
+                "You're in an ancient stone chamber.");
         pastRoom.setDark(true);
 
         presentRoom = new Room(
                 "Present",
-                "A damaged laboratory. Emergency lights flicker.");
+                "A damaged laboratory. Emergency lights are flickering.");
 
         futureRoom = new Room(
                 "Future",
                 "A futuristic control room controlled by AI.");
+
         pastRoom.addExit("present", presentRoom);
         presentRoom.addExit("past", pastRoom);
         presentRoom.addExit("future", futureRoom);
@@ -79,16 +80,44 @@ public class Game {
 
         Book ancientBook = new Book(
                 "Ancient Book",
-                "There's 4 sacred symbols and they always follow this pattern::\n\n"
-                + "Sun -> Tree -> River -> Mountain\n\n");
+                """
+                        TIMEFLOW LABORATORY ARCHIVE
+                        ENTRY 001: THE BEGINNING OF TIME TRAVEL
+
+                        Before the TimeFlow Laboratory became a place
+                        of advanced technology, some scientists discovered
+                        that time could be influenced.
+
+                        The first Time Machine was created to study the Past.
+                        However, controlling only one tense of time created instability.
+                        Therefore it was decided to create 3 time machines, each 
+                        powered by a different stone.
+
+                        Green Stone - Keeps the past timeline.
+                        Yellow Stone - Keeps the present timeline.
+                        Blue Stone - Keeps the future timeline.
+
+                        The first machine was protected by a code that was 
+                        created using an ancient symbol system.
+
+                        The symbols were placed in the order that
+                        represented the beginning of the civilization:
+
+                        Sun -> Tree -> River -> Mountain
+
+                        In order to restore the past machine you need to 
+                        understand how the past was created and find the 
+                        clues other scientist left.
+
+                        """);
 
         Item stoneTable = new Item(
                 "Stone Table",
                 "The code for each sacred symbols is:\n\n"
-                + "Tree: 8\n\n"
-                + "River: 1\n\n"
-                + "Sun: 4\n\n"
-                + "Mountain: 6\n\n");
+                        + "Tree: 8\n\n"
+                        + "River: 1\n\n"
+                        + "Sun: 4\n\n"
+                        + "Mountain: 6\n\n");
 
         pastRoom.addItem(lantern);
         pastRoom.addItem(matches);
@@ -105,11 +134,11 @@ public class Game {
 
         Item whiteboard = new Item(
                 "Whiteboard",
-                "The number written on each wire is: \n\n"
-                    + "Red: 6\n\n"
-                    + "Green: 9\n\n"
-                    + "Blue: 2\n\n"
-                    + "Yellow: 0\n\n");
+                "The number for each wire is: \n\n"
+                        + "Red: 6\n\n"
+                        + "Green: 9\n\n"
+                        + "Blue: 2\n\n"
+                        + "Yellow: 0\n\n");
 
         Item battery = new Item(
                 "Battery",
@@ -125,9 +154,29 @@ public class Game {
 
         Book presentBook = new Book(
                 "Present History Book",
-                "The accident broke the timeline.\n\n"
-                + "Power flows in this order:\n"
-                + "Red -> Blue -> Yellow -> Green\n\n");
+                """
+                        TIMEFLOW LABORATORY ARCHIVE
+                        ENTRY 403: THE TIMELINE FRACTURE
+
+                        As scientists were experimenting the Time reactor 
+                        overloaded, this caused all three machines to stop 
+                        working, cousing a split between three time periods.
+
+                        The Past Machine stopped first. Then the Present 
+                        machine lost the electrical power and the Future 
+                        machine activated its security systems and blocked 
+                        everything.
+
+                        To restore the Present Machine, the power system
+                        must be repaired. The wires need to be placed in 
+                        a specific flow sequence:
+
+                        Red -> Blue -> Yellow -> Green
+
+                        Once the code is inserted on the Present machine,
+                        the machine will be restarted and you'll get the Time stone.
+
+                        """);
 
         presentRoom.addItem(computer);
         presentRoom.addItem(whiteboard);
@@ -150,15 +199,37 @@ public class Game {
 
         Book futureBook = new Book(
                 "Future Book",
-                "The future survives because the past was repaired.\n\n"
-                 + "The AI password is hidden in memory fragments.");
+                """
+                        TIMEFLOW AI ARCHIVE
+                        ENTRY 4137: THE FINAL TIMELINE
+
+                        The future was created from the choices
+                        made in the past and in the present.
+
+                        When the timeline fractured, the Future Machine
+                        entered emergency security mode since the past and 
+                        present were both broken.
+
+                        To prevent the destruction of time itself,
+                        the AI divided its memory into several fragments.
+
+                        The memory chips contain the information needed
+                        to access the Future Machine and restore it.
+
+                        Once the AI terminal is unlocked, the timeline will be restored.
+
+                        Past.
+                        Present.
+                        Future.
+
+                        """);
 
         MemoryChip chip1 = new MemoryChip("Memory Chip 1", 9);
         MemoryChip chip2 = new MemoryChip("Memory Chip 2", 3);
         MemoryChip chip3 = new MemoryChip("Memory Chip 3", 7);
         MemoryChip chip4 = new MemoryChip("Memory Chip 4", 4);
 
-        Item mainConsole = new Item("Main Console","Controls the Future Machine.");
+        Item mainConsole = new Item("Main Console", "Controls the Future Machine.");
 
         futureRoom.addItem(aiTerminal);
         futureRoom.addItem(hologram);

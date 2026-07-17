@@ -84,9 +84,9 @@ public class Door implements Interactable, Inspectable {
 
         if (canOpen(player)) {
             locked = false;
-            System.out.println("The " + name + " unlocks!");
+            System.out.println("The " + name + " finally unlocks!");
         } else {
-            System.out.println("The door is locked. You need more Time Stones.");
+            System.out.println("The door is locked. You need more Time Stones!");
         }
     }
 

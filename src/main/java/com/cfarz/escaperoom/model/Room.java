@@ -225,7 +225,7 @@ public class Room implements Inspectable {
     public String inspect() {
 
         if (dark) {
-            return "It is too darkª You can't see anything. Maybe try lighting up something.";
+            return "It is too dark! You can't see anything. Maybe try lighting up something.";
         }
 
         return description;

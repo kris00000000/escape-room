@@ -15,7 +15,7 @@ public class MemoryChip extends Item {
      * @param number the number stored inside the memory chip.
      */
     public MemoryChip(String name, int number) {
-        super(name, "A memory fragment containing a number.");
+        super(name, "A memory chip containing a number.");
         this.number = number;
     }
 

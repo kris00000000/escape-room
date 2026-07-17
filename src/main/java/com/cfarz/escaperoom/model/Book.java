@@ -14,7 +14,7 @@ public class Book extends Item {
      * @param contents the information contained inside the book.
      */
     public Book(String name, String contents) {
-        super(name, "An old book containing important information.");
+        super(name, "An old book containing important information. You should pay attention!");
         this.contents = contents;
     }
 

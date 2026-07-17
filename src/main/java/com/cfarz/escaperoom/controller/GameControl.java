@@ -38,7 +38,7 @@ public class GameControl {
             processCommand(choice);
 
             if (game.getTimer().isTimeUp()) {
-                System.out.println("Time has run out!");
+                System.out.println("Time has run out! The timeline collapsed and the entire universe got destroyed!!!");
                 running = false;
             }
         }
@@ -112,7 +112,7 @@ public class GameControl {
         System.out.println("6. Use item");
         System.out.println("7. Repair machine");
         System.out.println("8. Move room");
-        System.out.println("9. Solve puzzle");
+        System.out.println("9. Solve combination");
         System.out.println("10. Quit");
         System.out.println("");
 
@@ -224,7 +224,7 @@ public class GameControl {
         Room room = game.getPlayer().getCurrentRoom();
 
         if (room.getPuzzles().isEmpty()) {
-            System.out.println("There are no puzzles here.");
+            System.out.println("There are no puzzles to help you here.");
             return;
         }
 
@@ -284,11 +284,28 @@ public class GameControl {
                 inventory.hasItem("Blue Time Stone")) {
 
             System.out.println();
-            System.out.println("Timeline restored.");
-            System.out.println("The three Time Machines synchronize.");
-            System.out.println("Time begins flowing normally again.");
-            System.out.println("Congratulations.");
-            System.out.println("You escaped.");
+            System.out.println("""
+
+                    The three Time Stones begin to shine.
+
+                    The green stone restores the memories
+                    of the past while the yellow stone stabilizes
+                    the present and the blue on rebuilds the future.
+
+                    The main time reactor is finally back on and the
+                    three broken splits finally merge together to form
+                    a continuous timeline.
+
+                    The final exit door opens.
+
+                    You walk out of the TimeFlow Laboratory,
+                    knowing that time itself has been saved.
+
+                    Congratulations, you restored the timeline
+                    and saved the world!
+
+                    =====================================
+                    """);
             running = false;
         }
     }
